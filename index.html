@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samui House — Villas & Condos in Koh Samui</title>
+<meta name="description" content="A family-run villa and condo business based on Koh Samui. We know every property personally and treat every guest and buyer like family — message us directly, no call centres.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0a0a0a;
+    --ink:#151515;
+    --white:#ffffff;
+    --paper:#f3f3f3;
+    --stone:#d9d9d9;
+    --ash:#6b6b6b;
+    --gold:#c8102e;
+    --gold-deep:#a30d25;
+    --gold-soft:rgba(200,16,46,.10);
+    --line:rgba(10,10,10,0.15);
+    --line-soft:rgba(255,255,255,0.2);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:400;letter-spacing:-0.01em;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  button{font-family:inherit;cursor:pointer;}
+  .eyebrow{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--ash);font-weight:600;
+  }
+  .wrap{max-width:1360px;margin:0 auto;padding:0 44px;}
+  @media(max-width:720px){.wrap{padding:0 22px;}}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:200;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:26px 44px;
+    color:var(--white);
+    transition:background .5s var(--ease),padding .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  .nav.solid{
+    background:rgba(250,249,246,0.92);
+    backdrop-filter:blur(10px);
+    color:var(--ink);
+    padding:16px 44px;
+    border-bottom:1px solid var(--line);
+  }
+  @media(max-width:720px){.nav,.nav.solid{padding:18px 22px;}}
+  .nav-logo{display:flex;align-items:center;gap:11px;font-family:'Playfair Display',serif;font-size:19px;letter-spacing:.02em;}
+  .nav-logo b{font-weight:600;}
+  .nav-logo svg{flex-shrink:0;display:block;}
+  .nav-logo-svg{flex-shrink:0;display:block;}
+  .nav-logo-text{display:flex;flex-direction:column;line-height:1.15;}
+  .nav-logo-text small{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.2em;font-weight:600;color:var(--ash);opacity:.85;margin-top:1px;}
+  @media(max-width:520px){.nav-logo-text small{display:none;} .nav-logo svg{width:28px;height:28px;}}
+  .nav-links{display:flex;gap:36px;align-items:center;}
+  .nav-links a{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.9;transition:opacity .25s;}
+  .nav-links a:hover{opacity:.55;}
+  .nav-cta{
+    border:1px solid currentColor;padding:10px 20px;font-size:11.5px;
+    letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+    border-radius:2px;transition:all .3s var(--ease);
+  }
+  .nav.solid .nav-cta{background:var(--ink);color:var(--white);border-color:var(--ink);}
+  .nav-cta:hover{background:var(--white);border-color:var(--white);color:var(--ink)!important;}
+  .nav-burger{display:none;background:none;border:none;color:inherit;font-size:22px;}
+  @media(max-width:860px){
+    .nav-links{display:none;}
+    .nav-burger{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;height:100vh;min-height:560px;width:100%;
+    display:flex;align-items:flex-end;overflow:hidden;background:var(--black);
+  }
+  .hero video{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:saturate(1.15) contrast(1.08) brightness(.9);
+  }
+  .hero::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(11,11,10,.35) 0%,rgba(11,11,10,.15) 38%,rgba(11,11,10,.75) 100%);
+  }
+  .hero-content{position:relative;z-index:2;width:100%;padding:0 44px 74px;color:var(--white);}
+  @media(max-width:720px){.hero-content{padding:0 22px 54px;}}
+  .hero-eyebrow{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--stone);margin-bottom:22px;display:flex;align-items:center;gap:14px;}
+  .hero-eyebrow::before{content:'';width:34px;height:1px;background:var(--stone);}
+  .hero h1{
+    font-size:clamp(48px,8.6vw,128px);line-height:.94;margin:0 0 26px;font-weight:400;
+    max-width:1100px;
+  }
+  .hero h1 em{font-style:italic;font-weight:400;}
+  .hero-sub{
+    display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;
+    border-top:1px solid var(--line-soft);padding-top:26px;
+  }
+  .hero-sub p{max-width:420px;font-size:15px;line-height:1.6;color:rgba(250,249,246,.82);margin:0;}
+  .hero-actions{display:flex;gap:14px;flex-shrink:0;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:15px 26px;
+    font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+    border-radius:2px;border:1px solid var(--white);transition:all .35s var(--ease);white-space:nowrap;
+  }
+  .btn-primary{background:var(--white);color:var(--black);}
+  .btn-primary:hover{background:transparent;color:var(--white);}
+  .btn-ghost{background:transparent;color:var(--white);}
+  .btn-ghost:hover{background:var(--white);color:var(--black);}
+  .btn-dark{border:1px solid var(--ink);background:var(--ink);color:var(--white);}
+  .btn-dark:hover{background:transparent;color:var(--ink);}
+  .btn-dark-outline{border:1px solid var(--ink);background:transparent;color:var(--ink);}
+  .btn-dark-outline:hover{background:var(--ink);color:var(--white);}
+  .btn:disabled{opacity:.4;cursor:not-allowed;}
+
+  .scroll-cue{
+    position:absolute;right:44px;bottom:36px;z-index:2;color:var(--white);
+    writing-mode:vertical-rl;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+    display:flex;align-items:center;gap:12px;opacity:.75;
+  }
+  .scroll-cue span.line{width:1px;height:46px;background:currentColor;display:inline-block;}
+  @media(max-width:720px){.scroll-cue{display:none;}}
+
+  /* ---------- INTRO ---------- */
+  .intro{padding:120px 0 90px;}
+  .intro-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start;}
+  @media(max-width:860px){.intro-grid{grid-template-columns:1fr;gap:34px;}}
+  .intro h2{font-size:clamp(30px,4vw,46px);font-weight:400;line-height:1.18;margin:14px 0 0;}
+  .intro-body p{font-size:15.5px;line-height:1.85;color:var(--ash);margin:0 0 18px;}
+  .intro-stats{display:flex;gap:44px;margin-top:34px;flex-wrap:wrap;}
+  .stat b{display:block;font-family:'Playfair Display',serif;font-size:34px;font-weight:400;color:var(--ink);}
+  .stat span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);}
+
+  /* ---------- SECTION HEADS ---------- */
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
+    margin-bottom:46px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:26px;
+    position:relative;
+  }
+  .section-head h2{font-size:clamp(28px,3.6vw,44px);font-weight:400;margin:10px 0 0;}
+
+  /* ---------- FILTER TABS ---------- */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;}
+  .tab{
+    padding:10px 18px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+    border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--ash);transition:all .25s;
+  }
+  .tab.active,.tab:hover{background:var(--ink);color:var(--white);border-color:var(--ink);}
+
+  /* ---------- VILLAS GRID ---------- */
+  .villas{padding:70px 0 110px;}
+  .villa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px;}
+  @media(max-width:980px){.villa-grid{grid-template-columns:repeat(2,1fr);gap:24px 18px;}}
+  @media(max-width:620px){.villa-grid{grid-template-columns:1fr;gap:26px;}}
+  .villa-card{
+    position:relative;background:var(--white);cursor:pointer;overflow:hidden;
+    border:1px solid var(--line);border-radius:6px;
+    transition:box-shadow .35s var(--ease),transform .35s var(--ease);
+  }
+  .villa-card:hover{box-shadow:0 16px 34px -14px rgba(11,11,10,.22);transform:translateY(-2px);}
+  .villa-media{position:relative;overflow:hidden;background:linear-gradient(135deg,#0a0a0a,#2b2b2b);
+    aspect-ratio:4/5;}
+  @media(max-width:620px){.villa-media{aspect-ratio:4/3;}}
+  .villa-media img{
+    width:100%;height:100%;object-fit:cover;
+    filter:saturate(1.08) contrast(1.03);
+    transition:filter .7s var(--ease),transform 1.1s var(--ease);
+    transform:scale(1.02);
+  }
+  .villa-card:hover .villa-media img{filter:saturate(1.2) contrast(1.05);transform:scale(1.08);}
+  .villa-tag{
+    position:absolute;top:16px;left:16px;z-index:2;
+    background:rgba(250,249,246,.94);color:var(--ink);
+    padding:6px 12px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+  }
+  .villa-tag.sale{background:rgba(11,11,10,.88);color:var(--white);}
+  .villa-num{
+    position:absolute;bottom:16px;left:16px;z-index:2;color:var(--white);
+    font-family:'Playfair Display',serif;font-size:13px;letter-spacing:.05em;
+    opacity:.85;
+  }
+  .villa-info{padding:20px 18px 18px;}
+  @media(max-width:620px){.villa-info{padding:18px 16px 16px;}}
+  .villa-info .loc{
+    display:inline-flex;align-items:center;gap:5px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    font-weight:800;color:var(--gold);background:var(--gold-soft);
+    padding:5px 10px 5px 7px;border-radius:20px;margin-bottom:10px;
+  }
+  .villa-info .loc svg{width:11px;height:11px;flex-shrink:0;}
+  .villa-info h3{font-size:22px;font-weight:400;margin:0 0 10px;}
+  .villa-desc-line{display:none;}
+  .villa-meta{display:flex;gap:8px;font-size:12.5px;color:var(--ink);margin-bottom:14px;flex-wrap:wrap;}
+  .villa-meta span{
+    display:inline-flex;align-items:center;gap:5px;font-weight:700;
+    background:var(--paper);border:1px solid var(--stone);border-radius:7px;padding:5px 9px;
+  }
+  .villa-meta span svg{width:14px;height:14px;flex-shrink:0;color:var(--gold);}
+  .villa-bottom-row{display:block;border-top:1px solid var(--line);padding-top:14px;margin-top:0;}
+  .villa-price{font-size:14px;font-weight:600;}
+  .villa-price small{display:block;font-weight:400;color:var(--ash);font-size:11px;letter-spacing:.06em;margin-bottom:3px;text-transform:uppercase;}
+  .villa-view{display:none;}
+
+  /* ---------- PROMO BADGE ---------- */
+  .promo-badge{
+    position:absolute;top:16px;right:16px;z-index:3;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--gold);color:var(--white);
+    padding:8px 10px 7px;border-radius:3px;line-height:1;
+    box-shadow:0 6px 16px -4px rgba(200,16,46,.5);
+    animation:promoPulse 2.6s ease-in-out infinite;
+  }
+  .promo-badge b{font-size:15px;font-weight:800;letter-spacing:.01em;}
+  .promo-badge span{font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;margin-top:2px;opacity:.85;}
+  @keyframes promoPulse{
+    0%,100%{transform:scale(1);box-shadow:0 6px 16px -4px rgba(200,16,46,.5);}
+    50%{transform:scale(1.06);box-shadow:0 8px 20px -4px rgba(200,16,46,.65);}
+  }
+  .price-was{
+    display:block;font-size:12px;color:var(--ash);text-decoration:line-through;font-weight:400;margin-bottom:2px;
+  }
+  .price-now{color:var(--ink);display:block;font-weight:700;font-size:15px;}
+  .promo-tag-inline{
+    display:inline-block;margin-left:8px;background:var(--gold);color:var(--white);font-size:9.5px;font-weight:800;
+    letter-spacing:.06em;padding:3px 7px;border-radius:2px;vertical-align:middle;
+  }
+
+  /* ---------- MOBILE SWIPE SLIDER ---------- */
+  .swipe-hint{display:none;align-items:center;gap:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ash);font-weight:700;margin-bottom:16px;}
+  .swipe-hint svg{width:15px;height:15px;animation:swipeMove 1.6s ease-in-out infinite;}
+  @keyframes swipeMove{0%,100%{transform:translateX(0);}50%{transform:translateX(6px);}}
+  @media(max-width:620px){
+    .swipe-hint{display:flex;justify-content:center;}
+    .villa-grid{
+      display:flex;grid-template-columns:none;
+      overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+      gap:16px;padding-bottom:6px;margin:0 -22px;
+      padding-left:calc(50% - 40vw);padding-right:calc(50% - 40vw);
+      scrollbar-width:none;
+    }
+    .villa-grid::-webkit-scrollbar{display:none;}
+    .villa-card{flex:0 0 80vw;max-width:360px;scroll-snap-align:center;scroll-snap-stop:always;}
+  }
+
+  /* ---------- SHOWCASE (guest & villa photo proof) ---------- */
+  .showcase{padding:20px 0 110px;}
+  .showcase-intro{font-size:15.5px;line-height:1.85;color:var(--ash);max-width:640px;margin:0 0 44px;}
+  .showcase-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:2px;background:var(--line);
+  }
+  @media(max-width:900px){.showcase-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px;}}
+  @media(max-width:520px){.showcase-grid{grid-template-columns:1fr;grid-auto-rows:260px;}}
+  .showcase-item{position:relative;overflow:hidden;background:var(--white);}
+  .showcase-item.tall{grid-row:span 2;}
+  .showcase-item.wide{grid-column:span 2;}
+  .showcase-item img{
+    width:100%;height:100%;object-fit:cover;filter:saturate(1.05);
+    transition:transform .9s var(--ease);
+  }
+  .showcase-item:hover img{transform:scale(1.06);}
+  .showcase-item::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(0deg,rgba(11,11,10,.75) 0%,rgba(11,11,10,0) 50%);
+  }
+  .showcase-caption{position:absolute;left:16px;right:16px;bottom:14px;z-index:2;color:var(--white);}
+  .showcase-caption b{display:block;font-family:'Playfair Display',serif;font-size:15.5px;font-weight:400;}
+  .showcase-caption span{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--stone);}
+
+  /* ---------- AUTO-SCROLLING GUEST REVIEW PHOTOS ---------- */
+  .marquee-section{padding:0 0 100px;}
+  .marquee-head{padding:0 44px;margin-bottom:32px;}
+  @media(max-width:720px){.marquee-head{padding:0 22px;}}
+  .marquee-wrap{
+    overflow:hidden;width:100%;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 60px,#000 calc(100% - 60px),transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 60px,#000 calc(100% - 60px),transparent 100%);
+  }
+  .marquee-track{display:flex;gap:18px;width:max-content;animation:marqueeScroll 46s linear infinite;}
+  .marquee-wrap:hover .marquee-track{animation-play-state:paused;}
+  .marquee-card{
+    width:230px;flex-shrink:0;background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;
+  }
+  @media(max-width:620px){.marquee-card{width:180px;}}
+  .marquee-card img{width:100%;height:230px;object-fit:cover;display:block;}
+  @media(max-width:620px){.marquee-card img{height:190px;}}
+  .marquee-body{padding:14px 16px 16px;}
+  .marquee-stars{display:flex;gap:2px;color:var(--gold);margin-bottom:8px;}
+  .marquee-stars svg{width:11px;height:11px;}
+  .marquee-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:13px;line-height:1.55;color:var(--ink);
+    font-weight:400;margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+  .marquee-name{font-size:11px;font-weight:700;letter-spacing:.03em;}
+  .marquee-name span{display:block;font-weight:400;color:var(--ash);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;margin-top:1px;}
+  @keyframes marqueeScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+  @media(prefers-reduced-motion:reduce){.marquee-track{animation:none;}}
+
+  /* ---------- ABOUT STRIP ---------- */
+  .strip{background:var(--ink);color:var(--white);padding:110px 0;}
+  .strip-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  @media(max-width:860px){.strip-grid{grid-template-columns:1fr;gap:36px;}}
+  .strip blockquote{
+    font-family:'Playfair Display',serif;font-style:italic;font-weight:400;
+    font-size:clamp(24px,3vw,34px);line-height:1.4;margin:0;color:var(--white);
+  }
+  .strip blockquote cite{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:11.5px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--stone);margin-top:26px;}
+  .strip-list{list-style:none;margin:0;padding:0;}
+  .strip-list li{
+    display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line-soft);
+    font-size:14.5px;
+  }
+  .strip-list li span:first-child{color:var(--stone);}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:90px 0 40px;}
+  .footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:44px;padding-bottom:60px;border-bottom:1px solid var(--line);}
+  @media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:500px){.footer-grid{grid-template-columns:1fr;}}
+  .footer-grid h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ash);margin:0 0 18px;font-weight:700;}
+  .footer-grid p,.footer-grid a{font-size:14px;line-height:2;color:var(--ash);display:block;}
+  .footer-grid a:hover{color:var(--ink);}
+  .footer-bottom{display:flex;justify-content:space-between;padding-top:28px;font-size:12px;color:var(--ash);flex-wrap:wrap;gap:10px;}
+
+  /* ---------- WHATSAPP FAB ---------- */
+  .wa-fab{
+    position:fixed;bottom:26px;right:26px;z-index:150;
+    width:58px;height:58px;border-radius:50%;background:var(--ink);color:var(--white);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.28);
+    transition:transform .3s var(--ease);
+  }
+  .wa-fab:hover{transform:scale(1.08);}
+
+  /* ---------- DETAIL OVERLAY ---------- */
+  .overlay{
+    position:fixed;inset:0;z-index:500;background:var(--white);
+    transform:translateY(100%);transition:transform .55s var(--ease);
+    overflow-y:auto;
+  }
+  .overlay.open{transform:translateY(0);}
+  .overlay-close{
+    position:fixed;top:26px;right:44px;z-index:520;
+    width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--white);
+    display:flex;align-items:center;justify-content:center;font-size:20px;border:none;
+  }
+  @media(max-width:720px){.overlay-close{right:20px;top:20px;}}
+
+  .slider{position:relative;height:78vh;min-height:460px;max-height:820px;background:var(--black);overflow:hidden;}
+  .slider-track{display:flex;height:100%;transition:transform .6s var(--ease);}
+  .slider-track img{width:100%;height:100%;object-fit:contain;object-position:center;flex-shrink:0;background:var(--black);}
+  .slider-nav{position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;
+    background:rgba(250,249,246,.9);border:none;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:5;}
+  .slider-nav.prev{left:20px;}
+  .slider-nav.next{right:20px;}
+  .slider-dots{position:absolute;bottom:22px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:5;}
+  .slider-dots span{width:7px;height:7px;border-radius:50%;background:rgba(250,249,246,.4);transition:background .3s;}
+  .slider-dots span.active{background:var(--white);}
+  .slider-count{position:absolute;bottom:24px;right:26px;color:var(--white);font-size:12px;letter-spacing:.1em;z-index:5;}
+  @media(max-width:720px){.slider-count{display:none;}}
+
+  .thumb-strip{
+    display:flex;gap:8px;padding:14px 44px;background:var(--black);overflow-x:auto;
+  }
+  @media(max-width:720px){.thumb-strip{padding:12px 22px;}}
+  .thumb-strip::-webkit-scrollbar{height:4px;}
+  .thumb-strip img{
+    width:84px;height:60px;object-fit:cover;flex-shrink:0;cursor:pointer;
+    opacity:.45;filter:saturate(.9);transition:opacity .3s,outline-color .3s;
+    outline:1px solid transparent;outline-offset:-1px;
+  }
+  .thumb-strip img.active{opacity:1;outline:1px solid var(--white);}
+  .thumb-strip img:hover{opacity:.85;}
+
+  .breadcrumb{display:flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ash);margin-bottom:28px;}
+  .breadcrumb a{color:var(--ash);transition:color .2s;}
+  .breadcrumb a:hover{color:var(--ink);}
+  .breadcrumb span.sep{opacity:.5;}
+  .breadcrumb span.current{color:var(--ink);font-weight:600;}
+
+  .detail-body{max-width:1180px;margin:0 auto;padding:44px 44px 120px;}
+  @media(max-width:720px){.detail-body{padding:32px 22px 90px;}}
+  .detail-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:34px;margin-bottom:32px;}
+  .detail-top h2{font-size:clamp(32px,4.4vw,52px);font-weight:400;margin:12px 0 0;}
+  .detail-badge-row{display:flex;align-items:center;gap:10px;margin-bottom:2px;}
+  .detail-badge{
+    display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--white);
+    padding:5px 12px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;border-radius:2px;
+  }
+  .detail-badge.sale{background:transparent;color:var(--ink);border:1px solid var(--ink);}
+  .detail-badge-row .verified{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--ash);letter-spacing:.04em;}
+  .detail-price{text-align:right;}
+  .detail-price b{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;display:block;color:var(--ink);}
+  .detail-price span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);}
+
+  .highlight-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;}
+  .highlight-chip{
+    display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border:1px solid var(--line);
+    border-radius:20px;font-size:12.5px;color:var(--ink);background:var(--white);
+  }
+  .highlight-chip svg{width:14px;height:14px;flex-shrink:0;color:var(--gold);}
+
+  .detail-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;}
+  @media(max-width:940px){.detail-grid{grid-template-columns:1fr;gap:50px;}}
+
+  .facts{display:flex;gap:0;flex-wrap:wrap;border:1px solid var(--line);margin-bottom:36px;}
+  .facts div{flex:1;min-width:110px;padding:20px;border-right:1px solid var(--line);display:flex;align-items:center;gap:12px;}
+  .facts div:last-child{border-right:none;}
+  .facts svg{width:22px;height:22px;color:var(--gold);flex-shrink:0;}
+  .facts b{display:block;font-family:'Playfair Display',serif;font-size:22px;font-weight:400;line-height:1;}
+  .facts span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);}
+
+  .detail-desc .eyebrow{margin-bottom:10px;}
+  .detail-desc p{font-size:15.5px;line-height:1.9;color:var(--ash);margin:0 0 18px;}
+  .detail-desc p:first-of-type::first-letter{
+    font-family:'Playfair Display',serif;font-size:52px;line-height:.75;float:left;padding:6px 10px 0 0;color:var(--ink);
+  }
+  .amenities{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;list-style:none;margin:26px 0 0;padding:0;}
+  .amenities li{font-size:14px;color:var(--ink);display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);}
+  .amenities li svg{width:15px;height:15px;color:var(--ash);flex-shrink:0;}
+
+  .location-line{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ash);margin:-16px 0 30px;}
+  .location-line svg{width:15px;height:15px;flex-shrink:0;}
+
+  .map-wrap{margin-top:16px;border:1px solid var(--line);overflow:hidden;filter:grayscale(.35) contrast(1.02);}
+  .map-frame{width:100%;height:320px;border:0;display:block;}
+  .map-link{
+    display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gold-deep);
+    border-bottom:1px solid var(--gold);padding-bottom:2px;
+  }
+  .map-link svg{width:15px;height:15px;}
+
+  /* ---------- PRICING TABLE (daily / monthly / yearly) ---------- */
+  .price-table{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);margin-top:16px;}
+  @media(max-width:560px){.price-table{grid-template-columns:1fr;}}
+  .price-table-cell{background:var(--white);padding:20px 18px;text-align:center;position:relative;}
+  .price-table-cell.best::before{
+    content:'Best Value';position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+    background:var(--ink);color:var(--white);font-size:9px;font-weight:800;letter-spacing:.08em;
+    text-transform:uppercase;padding:4px 10px;border-radius:0 0 4px 4px;
+  }
+  .price-table-cell .ptc-period{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ash);
+    font-weight:700;margin-bottom:10px;margin-top:6px;}
+  .price-table-cell .ptc-price{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;color:var(--ink);
+    display:block;line-height:1.2;}
+  .price-table-cell .ptc-unit{font-size:11px;color:var(--ash);display:block;margin-top:2px;}
+  .price-table-cell .ptc-unavailable{font-size:13px;color:var(--stone);font-style:italic;padding:8px 0;}
+  .price-table-note{font-size:12px;color:var(--ash);line-height:1.6;margin-top:12px;}
+
+  /* ---------- BOOKING PANEL ---------- */
+  .booking{background:var(--paper);border:1px solid var(--line);padding:34px;position:sticky;top:110px;align-self:start;box-shadow:0 24px 60px -20px rgba(11,11,10,.15);}
+  @media(max-width:940px){.booking{position:static;}}
+  .booking h3{font-size:22px;font-weight:400;margin:8px 0 6px;}
+  .booking>p.note{font-size:13px;color:var(--ash);margin:0 0 24px;line-height:1.6;}
+  .trust-row{display:flex;justify-content:space-between;gap:10px;margin-top:22px;padding-top:20px;border-top:1px solid var(--line);flex-wrap:wrap;}
+  .trust-item{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--ash);letter-spacing:.02em;}
+  .trust-item svg{width:15px;height:15px;flex-shrink:0;color:var(--ink);}
+
+  .seg{display:flex;border:1px solid var(--ink);border-radius:2px;overflow:hidden;margin-bottom:22px;}
+  .seg button{flex:1;padding:12px 10px;border:none;background:transparent;color:var(--ink);
+    font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;transition:all .25s;}
+  .seg button.active{background:var(--ink);color:var(--white);}
+
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);margin-bottom:7px;font-weight:700;}
+  .field input,.field select{
+    width:100%;padding:13px 14px;border:1px solid var(--line);background:var(--white);
+    font-family:inherit;font-size:14px;color:var(--ink);border-radius:2px;
+  }
+  .field input:focus,.field select:focus{outline:none;border-color:var(--ink);}
+  .date-input{cursor:pointer;background:var(--white) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%238a867d" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>') no-repeat right 14px center;background-size:16px;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .duration-select{display:none;}
+  .duration-select.show{display:block;}
+  .dates-fields{display:block;}
+  .dates-fields.hide{display:none;}
+
+  /* ---------- CUSTOM CALENDAR POPUP (English) ---------- */
+  .cal-popup{
+    position:fixed;z-index:800;width:280px;background:var(--white);border:1px solid var(--line);
+    box-shadow:0 20px 50px -12px rgba(11,11,10,.25);padding:16px;display:none;font-family:'Inter',sans-serif;
+  }
+  .cal-popup.open{display:block;}
+  .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+  .cal-head b{font-family:'Playfair Display',serif;font-size:15px;font-weight:500;}
+  .cal-head button{background:none;border:1px solid var(--line);width:28px;height:28px;border-radius:50%;font-size:14px;color:var(--ink);display:flex;align-items:center;justify-content:center;}
+  .cal-head button:hover{background:var(--ink);color:var(--white);border-color:var(--ink);}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;}
+  .cal-dow{font-size:10px;text-align:center;color:var(--ash);letter-spacing:.05em;padding-bottom:6px;text-transform:uppercase;}
+  .cal-day{
+    text-align:center;font-size:12.5px;padding:8px 0;cursor:pointer;border-radius:2px;color:var(--ink);
+  }
+  .cal-day:hover{background:var(--paper);}
+  .cal-day.disabled{color:var(--stone);cursor:not-allowed;pointer-events:none;}
+  .cal-day.empty{visibility:hidden;}
+  .cal-day.selected{background:var(--ink);color:var(--white);}
+  .cal-day.today{font-weight:700;text-decoration:underline;text-underline-offset:3px;}
+
+  .booking .btn-dark{width:100%;justify-content:center;padding:16px;font-size:12px;margin-top:6px;}
+  .form-msg{font-size:12.5px;color:var(--ash);margin-top:14px;line-height:1.6;}
+  .form-error{font-size:12px;color:#a13a2b;margin-top:8px;display:none;}
+  .form-error.show{display:block;}
+
+  /* ---------- ADMIN PANEL ---------- */
+  .admin-overlay{
+    position:fixed;inset:0;z-index:900;background:rgba(11,11,10,.92);
+    display:none;align-items:center;justify-content:center;padding:24px;overflow-y:auto;
+  }
+  .admin-overlay.open{display:flex;}
+  .admin-box{background:var(--white);width:100%;max-width:420px;padding:36px;border-radius:6px;margin:auto;}
+  .admin-box h3{font-size:22px;font-weight:400;margin:6px 0 20px;}
+  .admin-box .field{margin-bottom:16px;}
+  .admin-note{font-size:12px;color:var(--ash);line-height:1.6;margin-top:14px;}
+
+  .admin-panel{
+    background:var(--white);width:100%;max-width:1100px;max-height:92vh;border-radius:6px;
+    display:none;flex-direction:column;overflow:hidden;margin:auto;
+  }
+  .admin-panel.open{display:flex;}
+  .admin-header{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    padding:22px 28px;border-bottom:1px solid var(--line);background:var(--paper);
+  }
+  .admin-header h3{font-size:20px;font-weight:500;margin:0;font-family:'Playfair Display',serif;}
+  .admin-header-actions{display:flex;gap:10px;flex-wrap:wrap;}
+  .admin-btn{
+    padding:9px 16px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+    border-radius:2px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;
+  }
+  .admin-btn:hover{background:var(--ink);color:var(--white);}
+  .admin-btn.primary{background:var(--ink);color:var(--white);}
+  .admin-btn.primary:hover{opacity:.85;}
+  .admin-btn.danger{border-color:#a13a2b;color:#a13a2b;}
+  .admin-btn.danger:hover{background:#a13a2b;color:var(--white);}
+
+  .admin-body{flex:1;overflow-y:auto;padding:24px 28px;}
+  .admin-villa-row{
+    display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);
+  }
+  .admin-villa-row img{width:64px;height:52px;object-fit:cover;border-radius:3px;flex-shrink:0;background:#eee;}
+  .admin-villa-row .avr-info{flex:1;min-width:0;}
+  .admin-villa-row .avr-info b{font-family:'Playfair Display',serif;font-weight:500;font-size:15px;display:block;}
+  .admin-villa-row .avr-info span{font-size:12px;color:var(--ash);}
+  .admin-villa-row .avr-actions{display:flex;gap:8px;flex-shrink:0;}
+
+  .admin-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:640px){.admin-form-grid{grid-template-columns:1fr;}}
+  .admin-form-grid .field.full{grid-column:1/-1;}
+  .admin-form textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:2px;font-family:inherit;
+    font-size:13.5px;resize:vertical;min-height:80px;
+  }
+  .admin-checkrow{display:flex;gap:20px;align-items:center;padding:8px 0;}
+  .admin-checkrow label{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;}
+  .admin-export-box textarea{width:100%;min-height:260px;font-family:monospace;font-size:11.5px;
+    padding:14px;border:1px solid var(--line);border-radius:3px;background:var(--paper);}
+
+  /* Body scroll lock */
+  body.locked{overflow:hidden;}
+
+  ::selection{background:var(--ink);color:var(--white);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo">
+    <svg width="40" height="40" viewBox="0 0 34 34" fill="none" class="nav-logo-svg">
+      <circle cx="17" cy="17" r="15.5" stroke="currentColor" stroke-width="1.1"/>
+      <path d="M8.5 18.5L17 10.3L25.5 18.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M11.3 18.3V24.7H22.7V18.3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17 10.3C15.3 7.7 12.6 6.8 10.4 7.1" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+      <path d="M17 10.3C18.7 7.7 21.4 6.8 23.6 7.1" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+      <path d="M9.3 27.8C11.8 26.3 14.3 28.6 16.8 27.1C19.3 25.6 21.8 27.9 24.3 26.4" stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none"/>
+    </svg>
+    <div class="nav-logo-text"><span><b>Samui House</b></span><small>KOH SAMUI · THAILAND</small></div>
+  </div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#villas">Villas</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#villas" class="nav-cta">Book a Villa</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&w=1600&q=60">
+    <source src="https://assets.mixkit.co/videos/4692/4692-720.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Koh Samui, Thailand</div>
+    <h1>Own your piece<br><em>of paradise in Samui.</em></h1>
+    <div class="hero-sub">
+      <p>Run by a local family who calls this island home. Whether you're looking for a villa to stay in or a condo to call your own, we'll help you find the right place, answer honestly, and look after you like one of our own — from your first message to us until long after you've moved in.</p>
+      <div class="hero-actions">
+        <a href="#villas" class="btn btn-primary">View Villas</a>
+        <a href="#contact" class="btn btn-ghost">Enquire</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="line"></span>Scroll</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro wrap" id="about">
+  <div class="intro-grid">
+    <div>
+      <div class="eyebrow">Est. Koh Samui</div>
+      <h2>Local hands.<br>Honest care.</h2>
+    </div>
+    <div class="intro-body">
+      <p>We're not a big agency — we're a small local family who grew up on this island, and we treat every guest and every buyer the way we'd treat our own brothers and sisters. From cosy condos to beachfront villas across Samui, every property listed here is one we know personally and would happily welcome our own family into.</p>
+      <p>No scripts, no pushy sales calls — just message us directly on WhatsApp and you'll be talking to a real person from Samui who genuinely cares how your stay, or your search for a place to call home, turns out.</p>
+      <div class="intro-stats">
+        <div class="stat"><b>06</b><span>Villas &amp; Condos</span></div>
+        <div class="stat"><b>05</b><span>Locations</span></div>
+        <div class="stat"><b>24h</b><span>Response Time</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTO-SCROLLING GUEST REVIEW PHOTOS -->
+<section class="marquee-section">
+  <div class="marquee-head">
+    <div class="eyebrow">Guest Snapshots</div>
+    <h2 class="serif" style="font-size:clamp(26px,3.2vw,38px);font-weight:400;margin:10px 0 0;">Moments our guests shared</h2>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+</section>
+
+<!-- VILLAS -->
+<section class="villas wrap" id="villas">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">The Collection</div>
+      <h2>Villas &amp; condos, for rent &amp; sale</h2>
+    </div>
+    <div class="tabs" id="filterTabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="rent">For Rent</button>
+      <button class="tab" data-filter="sale">For Sale</button>
+    </div>
+  </div>
+  <div class="swipe-hint">Swipe to explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+  <div class="villa-grid" id="villaGrid"></div>
+</section>
+
+<!-- SHOWCASE: guest & villa photo proof -->
+<section class="showcase wrap" id="reviews">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Proof, Not Promises</div>
+      <h2>Our team &amp; guests, on-site</h2>
+    </div>
+  </div>
+  <p class="showcase-intro">Real handovers, real check-ins, real friendships — a look at Samui House at work across the island's villas and condos. We greet almost every guest and buyer in person, because that's simply how we were raised to treat people who visit our home.</p>
+
+  <div class="showcase-grid" id="showcaseGrid"></div>
+</section>
+
+<!-- STRIP -->
+<section class="strip">
+  <div class="wrap strip-grid">
+    <blockquote>
+      "We don't just sell villas and condos — we grew up on this island, and we look after every guest and buyer like they're our own brothers and sisters."
+      <cite>— Samui House</cite>
+    </blockquote>
+    <ul class="strip-list">
+      <li><span>Booking</span><span>Direct via WhatsApp, confirmed within 24 hours</span></li>
+      <li><span>Stays</span><span>Nightly, weekly, or monthly</span></li>
+      <li><span>Ownership</span><span>Sales enquiries handled personally</span></li>
+      <li><span>Location</span><span>Chaweng, Bophut, Lamai, Maenam &amp; Bang Por</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Samui House</h4>
+        <p style="max-width:280px;color:var(--ash);">A small, family-run villa and condo business based right here on Koh Samui. We answer every message ourselves and look after every guest and buyer like they're part of our family.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#villas">Villas</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#about">About</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="https://wa.me/66611973066" target="_blank" rel="noopener">WhatsApp +66 61 197 3066</a>
+        <a href="mailto:tamanoo5678@gmail.com">tamanoo5678@gmail.com</a>
+        <p>Koh Samui, Surat Thani, Thailand</p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="https://www.instagram.com/tamanhaha/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/sakdadet.bunchual" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Samui House. All rights reserved.</span>
+      <span>Koh Samui, Thailand · <a href="#" id="adminOpenLink" style="text-decoration:underline;">Admin</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a class="wa-fab" href="https://wa.me/66611973066" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path fill="currentColor" d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4.1 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7S23 3 16 3zm0 23c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4a10.5 10.5 0 1 1 9.1 4.8z"/><path fill="currentColor" d="M22 18.6c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.6.8.3 1.5.2 2-.1.6-.3 2-.8 2.2-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<!-- DETAIL OVERLAY -->
+<div class="overlay" id="overlay">
+  <button class="overlay-close" id="overlayClose" aria-label="Close">✕</button>
+  <div class="slider" id="slider">
+    <div class="slider-track" id="sliderTrack"></div>
+    <button class="slider-nav prev" id="sliderPrev">‹</button>
+    <button class="slider-nav next" id="sliderNext">›</button>
+    <div class="slider-dots" id="sliderDots"></div>
+    <div class="slider-count" id="sliderCount"></div>
+  </div>
+  <div class="thumb-strip" id="thumbStrip"></div>
+  <div class="detail-body">
+    <div class="breadcrumb">
+      <a href="#villas" id="crumbHome">Villas</a>
+      <span class="sep">/</span>
+      <span class="current" id="crumbName">Villa Name</span>
+    </div>
+    <div class="detail-top">
+      <div>
+        <div class="detail-badge-row" id="dBadgeRow"></div>
+        <div class="eyebrow" id="dLoc">Location</div>
+        <h2 id="dName">Villa Name</h2>
+      </div>
+      <div class="detail-price" id="dPrice"></div>
+    </div>
+    <div class="location-line">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+      <span id="dLocLine">Koh Samui, Thailand</span>
+    </div>
+    <div class="highlight-row" id="dHighlights"></div>
+    <div class="detail-grid">
+      <div>
+        <div class="facts" id="dFacts"></div>
+        <div class="detail-desc">
+          <div class="eyebrow">Overview</div>
+          <p id="dDesc"></p>
+        </div>
+        <div class="eyebrow" style="margin-top:30px;">Amenities</div>
+        <ul class="amenities" id="dAmenities"></ul>
+
+        <div class="eyebrow" style="margin-top:34px;" id="dPricingLabel">Rental Rates</div>
+        <div class="price-table" id="dPriceTable"></div>
+
+        <div class="eyebrow" style="margin-top:34px;">Location</div>
+        <div class="map-wrap">
+          <iframe id="dMap" class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <a id="dMapLink" class="map-link" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          Open in Google Maps
+        </a>
+      </div>
+
+      <!-- BOOKING PANEL -->
+      <div class="booking">
+        <div class="eyebrow">Reserve</div>
+        <h3 id="bTitle">Book This Villa</h3>
+        <p class="note">Fill in your details below — your request is sent straight to us on WhatsApp, and we'll confirm availability within 24 hours.</p>
+
+        <div class="seg" id="intentSeg" style="display:none;">
+          <button type="button" class="active" data-intent="rent">I Want to Rent</button>
+          <button type="button" data-intent="sale">I Want to Buy</button>
+        </div>
+
+        <form id="bookingForm">
+          <div class="field">
+            <label for="fName">Full Name</label>
+            <input type="text" id="fName" required placeholder="Jane Anderson">
+          </div>
+          <div class="field">
+            <label for="fPhone">Phone Number</label>
+            <input type="tel" id="fPhone" required placeholder="+44 7700 900123">
+          </div>
+
+          <div id="rentFields">
+            <div class="seg" id="stayTypeSeg">
+              <button type="button" class="active" data-stay="nightly">Nightly Stay</button>
+              <button type="button" data-stay="monthly">Monthly Stay</button>
+            </div>
+
+            <div class="dates-fields" id="datesFields">
+              <div class="row2">
+                <div class="field">
+                  <label for="fCheckin">Check-in</label>
+                  <input type="text" id="fCheckin" class="date-input" readonly placeholder="Select date" autocomplete="off">
+                </div>
+                <div class="field">
+                  <label for="fCheckout">Check-out</label>
+                  <input type="text" id="fCheckout" class="date-input" readonly placeholder="Select date" autocomplete="off">
+                </div>
+              </div>
+            </div>
+
+            <div class="field duration-select" id="durationField">
+              <label for="fDuration">Booking Duration</label>
+              <select id="fDuration">
+                <option value="">Select duration</option>
+                <option value="1 Month">1 Month</option>
+                <option value="2 Months">2 Months</option>
+                <option value="3 Months">3 Months</option>
+                <option value="6 Months">6 Months</option>
+                <option value="7 Months">7 Months</option>
+                <option value="8 Months">8 Months</option>
+                <option value="9 Months">9 Months</option>
+                <option value="10 Months">10 Months</option>
+                <option value="11 Months">11 Months</option>
+                <option value="12 Months">12 Months</option>
+                <option value="2 Year" >2 Year </option>
+              </select>
+            </div>
+
+            <div class="field duration-select" id="startMonthField">
+              <label for="fStartMonth">Preferred Start Date</label>
+              <input type="text" id="fStartMonth" class="date-input" readonly placeholder="Select date" autocomplete="off">
+            </div>
+
+            <div class="field">
+              <label for="fGuests">Guests</label>
+              <select id="fGuests">
+                <option value="">Select guests</option>
+                <option>1–2 guests</option>
+                <option>3–4 guests</option>
+                <option>5–6 guests</option>
+                <option>7+ guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field" id="saleNote" style="display:none;">
+            <label>Message</label>
+            <input type="text" id="fSaleMsg" placeholder="e.g. I'd like to arrange a viewing">
+          </div>
+
+          <div class="form-error" id="formError">Please fill in your name, phone number, and the required dates.</div>
+          <button type="submit" class="btn btn-dark">Send via WhatsApp</button>
+          <p class="form-msg">By submitting, you'll be redirected to WhatsApp with your enquiry pre-filled, and a copy will be emailed to us automatically — nothing is booked until we confirm.</p>
+          <p class="form-msg" id="emailStatus" style="display:none;"></p>
+        </form>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l7 3v6c0 5-3.4 8.4-7 11-3.6-2.6-7-6-7-11V5l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            Managed Directly
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            Replies Within 24h
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            No Hidden Fees
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CUSTOM ENGLISH CALENDAR POPUP -->
+<div class="cal-popup" id="calPopup">
+  <div class="cal-head">
+    <button type="button" id="calPrev" aria-label="Previous month">‹</button>
+    <b id="calLabel">Month Year</b>
+    <button type="button" id="calNext" aria-label="Next month">›</button>
+  </div>
+  <div class="cal-grid" id="calGrid"></div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-overlay" id="adminOverlay">
+
+  <!-- Login gate -->
+  <div class="admin-box" id="adminLoginBox">
+    <div class="eyebrow">Samui House</div>
+    <h3>Admin Login</h3>
+    <div class="field">
+      <label for="adminPassword">Password</label>
+      <input type="password" id="adminPassword" placeholder="Enter admin password" autocomplete="off">
+    </div>
+    <p class="form-error" id="adminLoginError">Incorrect password. Please try again.</p>
+    <button type="button" class="admin-btn primary" id="adminLoginBtn" style="width:100%;padding:13px;">Log In</button>
+    <button type="button" class="admin-btn" id="adminLoginCancel" style="width:100%;margin-top:8px;">Cancel</button>
+    <p class="admin-note">This is a simple client-side password meant to keep casual visitors out — it is not secure enough for sensitive data. Change it in the code before relying on it (search for ADMIN_PASSWORD).</p>
+  </div>
+
+  <!-- Villa list -->
+  <div class="admin-panel" id="adminListPanel">
+    <div class="admin-header">
+      <h3>Manage Villas (<span id="adminCount">0</span>)</h3>
+      <div class="admin-header-actions">
+        <button type="button" class="admin-btn primary" id="adminAddBtn">+ Add Villa</button>
+        <button type="button" class="admin-btn" id="adminExportBtn">Export Villa Data</button>
+        <button type="button" class="admin-btn" id="adminResetBtn">Reset to Defaults</button>
+        <button type="button" class="admin-btn" id="adminLogoutBtn">Log Out</button>
+        <button type="button" class="admin-btn" id="adminCloseBtn">Close</button>
+      </div>
+    </div>
+    <div class="admin-body" id="adminListBody"></div>
+  </div>
+
+  <!-- Villa edit/add form -->
+  <div class="admin-panel" id="adminFormPanel">
+    <div class="admin-header">
+      <h3 id="adminFormTitle">Edit Villa</h3>
+      <div class="admin-header-actions">
+        <button type="button" class="admin-btn primary" id="adminSaveBtn">Save Villa</button>
+        <button type="button" class="admin-btn" id="adminFormBackBtn">Back to List</button>
+      </div>
+    </div>
+    <div class="admin-body">
+      <form id="adminForm" class="admin-form">
+        <div class="admin-form-grid">
+          <div class="field"><label>Villa Name</label><input type="text" id="af_name" required></div>
+          <div class="field"><label>Location</label><input type="text" id="af_location" required></div>
+          <div class="field"><label>Latitude</label><input type="text" id="af_lat" placeholder="9.5924"></div>
+          <div class="field"><label>Longitude</label><input type="text" id="af_lng" placeholder="100.0567"></div>
+          <div class="field"><label>Bedrooms</label><input type="number" id="af_bedrooms" min="0"></div>
+          <div class="field"><label>Bathrooms</label><input type="number" id="af_bathrooms" min="0"></div>
+          <div class="field"><label>Guests</label><input type="number" id="af_guests" min="0"></div>
+          <div class="field">
+            <label>Listing Type</label>
+            <div class="admin-checkrow">
+              <label><input type="checkbox" id="af_rent"> For Rent</label>
+              <label><input type="checkbox" id="af_sale"> For Sale</label>
+            </div>
+          </div>
+          <div class="field"><label>Nightly Rate (e.g. ฿22,000 / night)</label><input type="text" id="af_rentNightly"></div>
+          <div class="field"><label>Monthly Rate (e.g. From ฿220,000 / month)</label><input type="text" id="af_rentMonthly"></div>
+          <div class="field"><label>Yearly Rate (e.g. From ฿2,200,000 / year)</label><input type="text" id="af_rentYearly"></div>
+          <div class="field"><label>Sale Price (e.g. ฿48,000,000)</label><input type="text" id="af_salePrice"></div>
+          <div class="field">
+            <label>Promotion</label>
+            <div class="admin-checkrow"><label><input type="checkbox" id="af_promoOn"> Active discount</label></div>
+          </div>
+          <div class="field"><label>Discount %</label><input type="number" id="af_promoPercent" min="0" max="90"></div>
+          <div class="field"><label>Promo Label (e.g. Flash Sale)</label><input type="text" id="af_promoLabel"></div>
+          <div class="field full"><label>Description</label><textarea id="af_desc"></textarea></div>
+          <div class="field full"><label>Highlights (one per line, 2–3 short tags)</label><textarea id="af_highlights"></textarea></div>
+          <div class="field full"><label>Amenities (one per line)</label><textarea id="af_amenities"></textarea></div>
+          <div class="field full"><label>Image URLs (one per line, first = cover photo)</label><textarea id="af_images"></textarea></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Export data modal -->
+  <div class="admin-panel" id="adminExportPanel">
+    <div class="admin-header">
+      <h3>Export Villa Data</h3>
+      <div class="admin-header-actions">
+        <button type="button" class="admin-btn primary" id="adminCopyBtn">Copy to Clipboard</button>
+        <button type="button" class="admin-btn" id="adminExportBackBtn">Back to List</button>
+      </div>
+    </div>
+    <div class="admin-body admin-export-box">
+      <p class="admin-note" style="margin-bottom:12px;">This is a static website with no database, so changes made here are only saved in <b>this browser</b>. To make your edits visible to every visitor, copy the code below and ask your developer to paste it into the site's source file, replacing the <code>DEFAULT_VILLAS</code> array — then re-upload the file to your host.</p>
+      <textarea id="adminExportText" readonly></textarea>
+    </div>
+  </div>
+
+</div>
+
+<!-- EmailJS — sends the booking form by email automatically, no mail app needed.
+     Setup required (free, ~5 minutes): see instructions in the script config below. -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+/* =========================================================
+   CONFIG — replace with the real business WhatsApp number
+   Format: country code + number, no + sign, no spaces
+========================================================= */
+const WHATSAPP_NUMBER = "66611973066";
+
+/* =========================================================
+   CONFIG — EmailJS (sends booking enquiries by email automatically)
+
+   HOW TO SET THIS UP (free, takes about 5 minutes):
+   1. Go to https://www.emailjs.com and sign up (free plan = 200 emails/month).
+   2. Add an Email Service → connect the Gmail account tamanoo5678@gmail.com.
+      This gives you a SERVICE_ID (e.g. "service_abc1234").
+   3. Create an Email Template. In the template body you can use these
+      variables — just paste them anywhere in the template text:
+        {{to_email}}  {{subject}}  {{message}}
+        {{guest_name}}  {{guest_phone}}  {{villa_name}}
+      This gives you a TEMPLATE_ID (e.g. "template_xyz789").
+   4. Go to Account → General to find your PUBLIC_KEY (e.g. "AbCdEfGh12345").
+   5. Paste all three values into the three constants below, replacing
+      the placeholder text. That's it — no server, no code changes needed.
+========================================================= */
+const EMAILJS_PUBLIC_KEY  = "YOUR_EMAILJS_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID  = "YOUR_EMAILJS_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";
+const NOTIFY_EMAIL = "tamanoo5678@gmail.com";
+
+if(typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY && !EMAILJS_PUBLIC_KEY.startsWith('YOUR_')){
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
+/* =========================================================
+   VILLA DATA
+========================================================= */
+const FALLBACK_IMG = null; // handled via handleImgError()
+
+const DEFAULT_VILLAS = [
+  
+  {
+    id: "villa-9",
+    name: "Villa 9",
+    location: "Chaweng Noi – Bophut,Koh Samui",
+    lat: 9.514506605450782,  lng: 100.04457496698413,
+    type: ["rent"],
+    bedrooms: 3, bathrooms: 4, guests: 6,
+    rentNightly: "฿13,300 / night",
+    promo: { percent: 10, label: "Limited-Time" },
+    rentMonthly: "From ฿120,000 / month",
+    desc: "Experience Luxury Living Every Day Imagine relaxing in your own private infinity pool overlooking a stunning 180° panoramic sea view, surrounded by tropical mountains, fresh air, and complete privacy. This isn't just a villa... It's your own private resort Perfect for those who appreciate comfort, privacy, and an exceptional lifestyle.",
+    amenities: ["Private Infinity Pool with 180° Sea View","Bright Open-Plan Living Area","2 Fully Equipped Kitchens","Laundry Area","Private Parking","Private parking","High-speed Wi-Fi","Pet Friendly (Rare for luxury villas on Koh Samui!)","Free Water","Pool Maintenance (2 times/week)","Housekeeping 3 times/month "],
+    highlights: [" Chaweng Beach — 5 mins","Bangkok Hospital — 4 mins","International School — 6 mins","Jungle Club — 9 mins","Lotus • Makro • Big C — 10 mins","Central Samui — 12 mins"],
+    images: [
+     "villa9/v1.jpeg","villa9/v2.jpeg","villa9/v3.jpeg", "villa9/v4.jpeg", "villa9/v5.jpeg",
+      "villa9/v6.jpeg","villa9/v7.jpeg","villa9/v8.jpeg","villa9/v9.jpeg","villa9/v10.jpeg",
+      "villa9/v11.jpeg", "villa9/v12.jpeg", "villa9/v13.jpeg", "villa9/v14.jpeg", "villa9/v15.jpeg",
+      "villa9/v16.jpeg", "villa9/v17.jpeg", "villa9/v18.jpeg", "villa9/v19.jpeg", "villa9/v20.jpeg", "villa9/v21.jpeg",
+      "villa9/v22.jpeg", "villa9/v23.jpeg","villa9/v24.jpeg","villa9/v25.jpeg","villa9/v26.jpeg",
+      "villa9/v27.jpeg","villa9/v28.jpeg","villa9/v29.jpeg","villa9/v30.jpeg","villa9/v31.jpeg",
+      "villa9/v32.jpeg", "villa9/v33.jpeg", "villa9/v34.jpeg","villa9/v35.jpeg",
+      "villa9/v36.jpeg","villa9/v37.jpeg","villa9/v38.jpeg","villa9/v39.jpeg", "villa9/v40.jpeg",
+      "villa9/v41.jpeg","villa9/v42.jpeg","villa9/v43.jpeg","villa9/v44.jpeg","villa9/v45.jpeg",
+      "villa9/v46.jpeg","villa9/v47.jpeg","villa9/v48.jpeg","villa9/v49.jpeg","villa9/v50.jpeg",
+      "villa9/v51.jpeg","villa9/v52.jpeg","villa9/v53.jpeg","villa9/v54.jpeg","villa9/v55.jpeg",
+      "villa9/v56.jpeg","villa9/v57.jpeg","villa9/v58.jpeg","villa9/v59.jpeg","villa9/v60.jpeg",
+      "villa9/v61.jpeg","villa9/v62.jpeg","villa9/v63.jpeg","villa9/v64.jpeg","villa9/v65.jpeg",
+      "villa9/v66.jpeg", "villa9/v67.jpeg","villa9/v68.jpeg","villa9/v69.jpeg","villa9/v70.jpeg",
+      "villa9/v71.jpeg","villa9/v72.jpeg","villa9/v73.jpeg","villa9/v74.jpeg","villa9/v75.jpeg",
+      "villa9/v76.jpeg","villa9/v77.jpeg","villa9/v78.jpeg","villa9/v79.jpeg","villa9/v80.jpeg",
+      "villa9/v81.jpeg","villa9/v82.jpeg",
+    ]
+  },
+  {
+    id: "villa-Nam",
+    name: "Villa Nam",
+    location: "Bophut,Khao Phra, Koh Samui",
+    lat: 9.547711765300816 , lng: 100.02569170889167, 
+    type: ["sale"],
+    bedrooms: 5, bathrooms: 6, guests: 10,
+    rentNightly: null,
+    rentMonthly: null,
+    salePrice: "19,000,000",
+    desc: "Minutes from Fisherman's Village, Villa Nam is a bright,Modern Luxury Villa. Ideal for families or groups who want the walkable energy of Bophut without giving up privacy at the end of the day.",
+    amenities: ["see view pool","Walking distance to Fisherman's Village","Air conditioning throughout","Fully equipped kitchen","Private parking","Panoramic sea view","Three-story house","Area of ​​2 ngan"],
+    highlights: ["see view Pool","Near Fisherman's Village","Family Friendly"],
+    images: [
+      "Villa Nam/K (64).jpg","Villa Nam/K (84).jpg", "Villa Nam/K (85).jpg", "Villa Nam/K (86).jpg","Villa Nam/K (1).jpg", "Villa Nam/K (2).jpg", "Villa Nam/K (3).jpg", "Villa Nam/K (4).jpg", "Villa Nam/K (5).jpg", "Villa Nam/K (6).jpg", "Villa Nam/K (7).jpg", "Villa Nam/K (8).jpg", "Villa Nam/K (9).jpg", "Villa Nam/K (10).jpg", "Villa Nam/K (11).jpg", "Villa Nam/K (12).jpg", "Villa Nam/K (13).jpg", "Villa Nam/K (14).jpg", "Villa Nam/K (15).jpg", "Villa Nam/K (16).jpg", "Villa Nam/K (17).jpg", "Villa Nam/K (18).jpg", "Villa Nam/K (19).jpg", "Villa Nam/K (20).jpg", "Villa Nam/K (21).jpg", "Villa Nam/K (22).jpg", "Villa Nam/K (23).jpg", "Villa Nam/K (24).jpg", "Villa Nam/K (25).jpg", "Villa Nam/K (26).jpg", "Villa Nam/K (27).jpg", "Villa Nam/K (28).jpg", "Villa Nam/K (29).jpg", "Villa Nam/K (30).jpg", "Villa Nam/K (31).jpg", "Villa Nam/K (32).jpg", "Villa Nam/K (33).jpg", "Villa Nam/K (34).jpg", "Villa Nam/K (35).jpg", "Villa Nam/K (36).jpg", "Villa Nam/K (37).jpg", "Villa Nam/K (38).jpg", "Villa Nam/K (39).jpg", "Villa Nam/K (40).jpg", "Villa Nam/K (41).jpg", "Villa Nam/K (42).jpg", "Villa Nam/K (43).jpg", "Villa Nam/K (44).jpg", "Villa Nam/K (45).jpg", "Villa Nam/K (46).jpg", "Villa Nam/K (47).jpg", "Villa Nam/K (48).jpg", "Villa Nam/K (49).jpg", "Villa Nam/K (50).jpg", "Villa Nam/K (51).jpg", "Villa Nam/K (52).jpg", "Villa Nam/K (53).jpg", "Villa Nam/K (54).jpg", "Villa Nam/K (55).jpg", "Villa Nam/K (56).jpg", "Villa Nam/K (57).jpg", "Villa Nam/K (58).jpg", "Villa Nam/K (59).jpg", "Villa Nam/K (60).jpg", "Villa Nam/K (61).jpg", "Villa Nam/K (62).jpg", "Villa Nam/K (63).jpg", "Villa Nam/K (65).jpg", "Villa Nam/K (66).jpg", "Villa Nam/K (67).jpg", "Villa Nam/K (68).jpg", "Villa Nam/K (69).jpg", "Villa Nam/K (70).jpg", "Villa Nam/K (71).jpg", "Villa Nam/K (72).jpg", "Villa Nam/K (73).jpg", "Villa Nam/K (74).jpg", "Villa Nam/K (75).jpg", "Villa Nam/K (76).jpg", "Villa Nam/K (77).jpg", "Villa Nam/K (78).jpg", "Villa Nam/K (79).jpg", "Villa Nam/K (80).jpg", "Villa Nam/K (81).jpg", "Villa Nam/K (82).jpg", "Villa Nam/K (83).jpg", "Villa Nam/K (87).jpg", "Villa Nam/K (88).jpg"
+
+    ]
+  },
+  {
+    id: "villa-P10",
+    name: "Villa P10",
+    location: "Bangrak, Koh Samui",
+    lat: 9.558122586772145,  lng: 100.05714458323371,
+    type: ["rent"],
+    bedrooms: 1, bathrooms: 2, guests: 2,
+    rentNightly: "฿3,300 / night",
+    promo: { percent: 10, label: "Limited-Time" },
+    rentMonthly: "฿33,000 / month",
+    salePrice: null,
+    desc: "Looking for a private & peaceful place to stay on Koh Samui with a swimming pool right next to your room?This could be exactly what you’re looking for!  Surrounded by restaurants, cafés  , and massage shops  Super convenient location to explore & enjoy island life Perfect for both tourists & long-term residents  ------ Only 33,000 THB / month",
+    amenities: ["Water & electricity included","No security deposit required","Free high-speed Wi-Fi"," Free room cleaning ","bed sheet change once per week","Private swimming pool right next to the room "],
+    highlights: ["Bangrak Beach — 🚶‍♂️ 1 minute","Convenience store — 🚶‍♂️ 1 minute","Massage shop — 1 minute "],
+    images: [
+      "P10/v (10).jpg", "P10/v (11).jpg","P10/v (1).jpg", "P10/v (2).jpg", "P10/v (3).jpg", "P10/v (4).jpg", "P10/v (5).jpg", "P10/v (6).jpg", "P10/v (7).jpg", "P10/v (8).jpg", "P10/v (9).jpg",  "P10/v (12).jpg", "P10/v (13).jpg", "P10/v (14).jpg", "P10/v (15).jpg", "P10/v (16).jpg", "P10/v (17).jpg", "P10/v (18).jpg", "P10/v (19).jpg", "P10/v (20).jpg", "P10/v (21).jpg", "P10/v (22).jpg", "P10/v (23).jpg", "P10/v (24).jpg", "P10/v (25).jpg", "P10/v (26).jpg", "P10/v (27).jpg", "P10/v (28).jpg", "P10/v (29).jpg", "P10/v (30).jpg", "P10/v (31).jpg", "P10/v (32).jpg", "P10/v (33).jpg", "P10/v (34).jpg", "P10/v (35).jpg", "P10/v (36).jpg"
+
+    ]
+  },
+];
+
+/* =========================================================
+   VILLA DATA STORE
+   `villas` is the array every render function reads from.
+   On load, we check the browser's local storage for admin-saved
+   edits; if none exist yet, we fall back to DEFAULT_VILLAS.
+
+   NOTE ON STORAGE: this uses the browser's localStorage, which is
+   scoped to one browser on one device. That means: if you (the
+   owner) edit villas in the Admin Panel, you'll see the changes
+   immediately in THAT browser — great for previewing — but a
+   visitor loading the site on their own phone/computer will still
+   see the original DEFAULT_VILLAS data, because localStorage isn't
+   shared between devices. A static HTML file has no database.
+   To make admin edits visible to every visitor, use the "Export
+   Villa Data" button in the Admin Panel: it generates the updated
+   code for you to paste back into this file (replacing
+   DEFAULT_VILLAS below), then re-upload/redeploy the file. For
+   true real-time editing without redeploying, this site would need
+   a small backend/database — ask if you'd like help setting one up
+   (e.g. a free service like Firebase or Supabase).
+========================================================= */
+const VILLA_STORAGE_KEY = 'samuihouse_villas_v1';
+
+function loadVillas(){
+  try{
+    const saved = localStorage.getItem(VILLA_STORAGE_KEY);
+    if(saved) return JSON.parse(saved);
+  }catch(e){ console.warn('Could not read saved villa data, using defaults.', e); }
+  return JSON.parse(JSON.stringify(DEFAULT_VILLAS));
+}
+
+function saveVillas(){
+  try{
+    localStorage.setItem(VILLA_STORAGE_KEY, JSON.stringify(villas));
+  }catch(e){ console.warn('Could not save villa data to this browser.', e); }
+}
+
+let villas = loadVillas();
+
+/* =========================================================
+   IMAGE ERROR FALLBACK
+========================================================= */
+function handleImgError(img){
+  img.onerror = null;
+  img.style.opacity = "0";
+  const parent = img.parentElement;
+  if(parent) parent.style.background = "linear-gradient(135deg,#0a0a0a,#2b2b2b)";
+}
+
+/* =========================================================
+   RENDER GRID
+========================================================= */
+const grid = document.getElementById('villaGrid');
+
+function statusLabel(v){
+  if(v.type.includes('rent') && v.type.includes('sale')) return [{cls:'',text:'For Rent & Sale'}];
+  if(v.type.includes('sale')) return [{cls:'sale',text:'For Sale'}];
+  return [{cls:'',text:'For Rent'}];
+}
+
+function priceLine(v){
+  if(v.type.includes('rent')){
+    if(v.rentNightly) return {small:'From', big:v.rentNightly};
+    if(v.rentMonthly) return {small:'From', big:v.rentMonthly};
+    if(v.rentYearly) return {small:'From', big:v.rentYearly};
+  }
+  return {small:'Asking Price', big:v.salePrice};
+}
+
+function applyDiscount(priceStr, percent){
+  if(!priceStr) return priceStr;
+  return priceStr.replace(/฿([\d,]+)/, (m, numStr) => {
+    const num = parseInt(numStr.replace(/,/g,''), 10);
+    const discounted = Math.round(num * (1 - percent/100) / 100) * 100;
+    return '฿' + discounted.toLocaleString('en-US');
+  });
+}
+
+function splitPriceUnit(priceStr){
+  /* splits "From ฿22,000 / night" into { amount:"From ฿22,000", unit:"/ night" } */
+  if(!priceStr) return { amount: null, unit: '' };
+  const parts = priceStr.split(' / ');
+  return { amount: parts[0], unit: parts[1] ? '/ ' + parts[1] : '' };
+}
+
+function renderPriceTable(v){
+  const label = document.getElementById('dPricingLabel');
+  const table = document.getElementById('dPriceTable');
+
+  if(!v.type.includes('rent') || (!v.rentNightly && !v.rentMonthly && !v.rentYearly)){
+    label.style.display = 'none';
+    table.style.display = 'none';
+    return;
+  }
+  label.style.display = 'block';
+  table.style.display = 'grid';
+
+  const nightly = (v.promo && v.rentNightly) ? applyDiscount(v.rentNightly, v.promo.percent) : v.rentNightly;
+
+  const tiers = [
+    { period: 'Daily', raw: nightly },
+    { period: 'Monthly', raw: v.rentMonthly },
+    { period: 'Yearly', raw: v.rentYearly }
+  ];
+
+  table.innerHTML = tiers.map(t => {
+    if(!t.raw){
+      return `
+        <div class="price-table-cell">
+          <div class="ptc-period">${t.period}</div>
+          <div class="ptc-unavailable">Contact us</div>
+        </div>
+      `;
+    }
+    const { amount, unit } = splitPriceUnit(t.raw);
+    const isBest = t.period === 'Yearly';
+    return `
+      <div class="price-table-cell ${isBest ? 'best' : ''}">
+        <div class="ptc-period">${t.period}</div>
+        <span class="ptc-price">${amount}</span>
+        <span class="ptc-unit">${unit}</span>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderGrid(filter){
+  grid.innerHTML = '';
+  villas.forEach((v, i) => {
+    if(filter !== 'all' && !v.type.includes(filter)) return;
+    const tag = statusLabel(v)[0];
+    const price = priceLine(v);
+
+    let priceHTML = `<small>${price.small}</small>${price.big}`;
+    let promoBadgeHTML = '';
+    if(v.promo && v.type.includes('rent')){
+      const discounted = applyDiscount(price.big, v.promo.percent);
+      priceHTML = `<small>${price.small}</small><span class="price-was">${price.big}</span><span class="price-now">${discounted}</span>`;
+      promoBadgeHTML = `<div class="promo-badge"><b>-${v.promo.percent}%</b><span>${v.promo.label}</span></div>`;
+    }
+
+    const card = document.createElement('div');
+    card.className = 'villa-card';
+    card.innerHTML = `
+      <div class="villa-media">
+        <img src="${v.images[0]}" alt="${v.name}" loading="lazy" onerror="handleImgError(this)">
+        <div class="villa-tag ${tag.cls}">${tag.text}</div>
+        ${promoBadgeHTML}
+        <div class="villa-num">${String(i+1).padStart(2,'0')}</div>
+      </div>
+      <div class="villa-info">
+        <div class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>${v.location}</div>
+        <h3>${v.name}</h3>
+        <div class="villa-meta">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/></svg>${v.bedrooms} Bed</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-2.5 1V12"/><path d="M4 12h18v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2Z"/><path d="M8 21v-2"/><path d="M16 21v-2"/></svg>${v.bathrooms} Bath</span>
+          <span>${v.guests} Guests</span>
+        </div>
+        <div class="villa-price">${priceHTML}</div>
+      </div>
+    `;
+    card.addEventListener('click', () => openDetail(v.id));
+    grid.appendChild(card);
+  });
+}
+renderGrid('all');
+
+document.querySelectorAll('#filterTabs .tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('#filterTabs .tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    renderGrid(tab.dataset.filter);
+  });
+});
+
+/* =========================================================
+   ADMIN PANEL
+   Change this password before giving anyone access to the panel.
+   This is a simple client-side check — fine for keeping casual
+   visitors out, not a substitute for real authentication.
+========================================================= */
+const ADMIN_PASSWORD = "samuihouse2026";
+
+const adminOverlay = document.getElementById('adminOverlay');
+const adminLoginBox = document.getElementById('adminLoginBox');
+const adminListPanel = document.getElementById('adminListPanel');
+const adminFormPanel = document.getElementById('adminFormPanel');
+const adminExportPanel = document.getElementById('adminExportPanel');
+let adminEditingId = null; // null = adding a new villa
+
+function openAdmin(){
+  adminOverlay.classList.add('open');
+  document.body.classList.add('locked');
+  if(sessionStorage.getItem('samuihouse_admin_ok') === '1'){
+    showAdminList();
+  } else {
+    showAdminLogin();
+  }
+}
+function closeAdmin(){
+  adminOverlay.classList.remove('open');
+  document.body.classList.remove('locked');
+}
+function showAdminLogin(){
+  adminLoginBox.style.display = 'block';
+  adminListPanel.classList.remove('open');
+  adminFormPanel.classList.remove('open');
+  adminExportPanel.classList.remove('open');
+  document.getElementById('adminPassword').value = '';
+  document.getElementById('adminLoginError').classList.remove('show');
+}
+function showAdminList(){
+  adminLoginBox.style.display = 'none';
+  adminFormPanel.classList.remove('open');
+  adminExportPanel.classList.remove('open');
+  adminListPanel.classList.add('open');
+  renderAdminList();
+}
+function showAdminForm(){
+  adminLoginBox.style.display = 'none';
+  adminListPanel.classList.remove('open');
+  adminExportPanel.classList.remove('open');
+  adminFormPanel.classList.add('open');
+}
+function showAdminExport(){
+  adminLoginBox.style.display = 'none';
+  adminListPanel.classList.remove('open');
+  adminFormPanel.classList.remove('open');
+  adminExportPanel.classList.add('open');
+  document.getElementById('adminExportText').value = buildVillasCode();
+}
+
+document.getElementById('adminOpenLink').addEventListener('click', (e) => { e.preventDefault(); openAdmin(); });
+document.getElementById('adminLoginCancel').addEventListener('click', closeAdmin);
+document.getElementById('adminCloseBtn').addEventListener('click', closeAdmin);
+document.getElementById('adminLoginBtn').addEventListener('click', () => {
+  const val = document.getElementById('adminPassword').value;
+  if(val === ADMIN_PASSWORD){
+    sessionStorage.setItem('samuihouse_admin_ok', '1');
+    showAdminList();
+  } else {
+    document.getElementById('adminLoginError').classList.add('show');
+  }
+});
+document.getElementById('adminPassword').addEventListener('keydown', (e) => {
+  if(e.key === 'Enter') document.getElementById('adminLoginBtn').click();
+});
+document.getElementById('adminLogoutBtn').addEventListener('click', () => {
+  sessionStorage.removeItem('samuihouse_admin_ok');
+  showAdminLogin();
+});
+
+function renderAdminList(){
+  const body = document.getElementById('adminListBody');
+  document.getElementById('adminCount').textContent = villas.length;
+  body.innerHTML = villas.map(v => `
+    <div class="admin-villa-row">
+      <img src="${(v.images && v.images[0]) || ''}" onerror="this.style.background='#ddd';this.src='';">
+      <div class="avr-info">
+        <b>${v.name}</b>
+        <span>${v.location} · ${v.type.join(' & ')}${v.promo ? ' · -' + v.promo.percent + '% promo' : ''}</span>
+      </div>
+      <div class="avr-actions">
+        <button type="button" class="admin-btn" data-edit="${v.id}">Edit</button>
+        <button type="button" class="admin-btn danger" data-delete="${v.id}">Delete</button>
+      </div>
+    </div>
+  `).join('');
+
+  body.querySelectorAll('[data-edit]').forEach(btn => {
+    btn.addEventListener('click', () => openAdminForm(btn.dataset.edit));
+  });
+  body.querySelectorAll('[data-delete]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const v = villas.find(x => x.id === btn.dataset.delete);
+      if(v && confirm(`Delete "${v.name}"? This cannot be undone.`)){
+        villas = villas.filter(x => x.id !== btn.dataset.delete);
+        saveVillas();
+        renderAdminList();
+        renderGrid(document.querySelector('#filterTabs .tab.active')?.dataset.filter || 'all');
+      }
+    });
+  });
+}
+
+document.getElementById('adminAddBtn').addEventListener('click', () => openAdminForm(null));
+document.getElementById('adminFormBackBtn').addEventListener('click', showAdminList);
+document.getElementById('adminExportBackBtn').addEventListener('click', showAdminList);
+document.getElementById('adminExportBtn').addEventListener('click', showAdminExport);
+
+function openAdminForm(id){
+  adminEditingId = id;
+  const v = id ? villas.find(x => x.id === id) : null;
+  document.getElementById('adminFormTitle').textContent = v ? `Edit: ${v.name}` : 'Add New Villa';
+
+  document.getElementById('af_name').value = v ? v.name : '';
+  document.getElementById('af_location').value = v ? v.location : '';
+  document.getElementById('af_lat').value = v ? v.lat : '';
+  document.getElementById('af_lng').value = v ? v.lng : '';
+  document.getElementById('af_bedrooms').value = v ? v.bedrooms : 1;
+  document.getElementById('af_bathrooms').value = v ? v.bathrooms : 1;
+  document.getElementById('af_guests').value = v ? v.guests : 2;
+  document.getElementById('af_rent').checked = v ? v.type.includes('rent') : true;
+  document.getElementById('af_sale').checked = v ? v.type.includes('sale') : false;
+  document.getElementById('af_rentNightly').value = (v && v.rentNightly) || '';
+  document.getElementById('af_rentMonthly').value = (v && v.rentMonthly) || '';
+  document.getElementById('af_rentYearly').value = (v && v.rentYearly) || '';
+  document.getElementById('af_salePrice').value = (v && v.salePrice) || '';
+  document.getElementById('af_promoOn').checked = !!(v && v.promo);
+  document.getElementById('af_promoPercent').value = (v && v.promo) ? v.promo.percent : 10;
+  document.getElementById('af_promoLabel').value = (v && v.promo) ? v.promo.label : 'Limited-Time';
+  document.getElementById('af_desc').value = v ? v.desc : '';
+  document.getElementById('af_highlights').value = v && v.highlights ? v.highlights.join('\n') : '';
+  document.getElementById('af_amenities').value = v && v.amenities ? v.amenities.join('\n') : '';
+  document.getElementById('af_images').value = v && v.images ? v.images.join('\n') : '';
+
+  showAdminForm();
+}
+
+function slugify(str){
+  return 'villa-' + str.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + Math.random().toString(36).slice(2,6);
+}
+
+document.getElementById('adminSaveBtn').addEventListener('click', () => {
+  const name = document.getElementById('af_name').value.trim();
+  const location = document.getElementById('af_location').value.trim();
+  if(!name || !location){ alert('Please fill in at least the villa name and location.'); return; }
+
+  const type = [];
+  if(document.getElementById('af_rent').checked) type.push('rent');
+  if(document.getElementById('af_sale').checked) type.push('sale');
+  if(type.length === 0){ alert('Select at least one listing type (Rent or Sale).'); return; }
+
+  const promoOn = document.getElementById('af_promoOn').checked;
+
+  const villaData = {
+    id: adminEditingId || slugify(name),
+    name,
+    location,
+    lat: parseFloat(document.getElementById('af_lat').value) || 9.5,
+    lng: parseFloat(document.getElementById('af_lng').value) || 100.05,
+    type,
+    bedrooms: parseInt(document.getElementById('af_bedrooms').value, 10) || 0,
+    bathrooms: parseInt(document.getElementById('af_bathrooms').value, 10) || 0,
+    guests: parseInt(document.getElementById('af_guests').value, 10) || 0,
+    rentNightly: document.getElementById('af_rentNightly').value.trim() || null,
+    rentMonthly: document.getElementById('af_rentMonthly').value.trim() || null,
+    rentYearly: document.getElementById('af_rentYearly').value.trim() || null,
+    salePrice: document.getElementById('af_salePrice').value.trim() || null,
+    promo: promoOn ? {
+      percent: parseInt(document.getElementById('af_promoPercent').value, 10) || 10,
+      label: document.getElementById('af_promoLabel').value.trim() || 'Limited-Time'
+    } : null,
+    desc: document.getElementById('af_desc').value.trim(),
+    highlights: document.getElementById('af_highlights').value.split('\n').map(s => s.trim()).filter(Boolean),
+    amenities: document.getElementById('af_amenities').value.split('\n').map(s => s.trim()).filter(Boolean),
+    images: document.getElementById('af_images').value.split('\n').map(s => s.trim()).filter(Boolean)
+  };
+
+  if(villaData.images.length === 0){
+    villaData.images = ["https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=85"];
+  }
+
+  if(adminEditingId){
+    const idx = villas.findIndex(x => x.id === adminEditingId);
+    if(idx > -1) villas[idx] = villaData;
+  } else {
+    villas.push(villaData);
+  }
+
+  saveVillas();
+  showAdminList();
+  renderGrid(document.querySelector('#filterTabs .tab.active')?.dataset.filter || 'all');
+});
+
+document.getElementById('adminResetBtn').addEventListener('click', () => {
+  if(confirm('Reset all villa data back to the original defaults? Any edits saved in this browser will be lost.')){
+    villas = JSON.parse(JSON.stringify(DEFAULT_VILLAS));
+    saveVillas();
+    renderAdminList();
+    renderGrid(document.querySelector('#filterTabs .tab.active')?.dataset.filter || 'all');
+  }
+});
+
+function buildVillasCode(){
+  const body = villas.map(v => {
+    const lines = [];
+    lines.push('  {');
+    lines.push(`    id: ${JSON.stringify(v.id)},`);
+    lines.push(`    name: ${JSON.stringify(v.name)},`);
+    lines.push(`    location: ${JSON.stringify(v.location)},`);
+    lines.push(`    lat: ${v.lat}, lng: ${v.lng},`);
+    lines.push(`    type: ${JSON.stringify(v.type)},`);
+    lines.push(`    bedrooms: ${v.bedrooms}, bathrooms: ${v.bathrooms}, guests: ${v.guests},`);
+    lines.push(`    rentNightly: ${JSON.stringify(v.rentNightly)},`);
+    lines.push(`    rentMonthly: ${JSON.stringify(v.rentMonthly)},`);
+    lines.push(`    rentYearly: ${JSON.stringify(v.rentYearly)},`);
+    lines.push(`    salePrice: ${JSON.stringify(v.salePrice)},`);
+    lines.push(`    promo: ${v.promo ? JSON.stringify(v.promo) : 'null'},`);
+    lines.push(`    desc: ${JSON.stringify(v.desc)},`);
+    lines.push(`    highlights: ${JSON.stringify(v.highlights)},`);
+    lines.push(`    amenities: ${JSON.stringify(v.amenities)},`);
+    lines.push(`    images: ${JSON.stringify(v.images)}`);
+    lines.push('  }');
+    return lines.join('\n');
+  }).join(',\n');
+  return `const DEFAULT_VILLAS = [\n${body}\n];`;
+}
+
+document.getElementById('adminCopyBtn').addEventListener('click', () => {
+  const ta = document.getElementById('adminExportText');
+  ta.select();
+  navigator.clipboard.writeText(ta.value).then(() => {
+    const btn = document.getElementById('adminCopyBtn');
+    const original = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = original; }, 1800);
+  }).catch(() => { /* clipboard API unavailable — the textarea is already selected for manual copy */ });
+});
+
+/* =========================================================
+   SHOWCASE — guest & villa photo proof (masonry-style grid)
+========================================================= */
+const showcaseItems = [
+  { img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80", name: "Villa Sila", note: "Welcoming a guest family, 2025", size: "any" },
+  { img: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1000&q=80", name: "Villa Anan", note: "Check-in on arrival day", size: "any" },
+  { img: "https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?auto=format&fit=crop&w=1000&q=80", name: "Villa Nawa", note: "Guests by the pool", size: "any" },
+  { img: "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=1000&q=80", name: "Villa Tara", note: "Sunset with returning guests", size: "any" },
+  { img: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=1200&q=80", name: "Villa Prana", note: "Family gathering, private beach", size: "any" },
+  { img: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80", name: "Villa Loka", note: "Handover day with new owners", size: "any" },
+  { img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1000&q=80", name: "Villa Anan", note: "Long-term guests settling in", size: "any" },
+  { img: "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=1000&q=80", name: "Team on-site", note: "Meeting guests in person", size: "any" }
+];
+
+document.getElementById('showcaseGrid').innerHTML = showcaseItems.map(s => `
+  <div class="showcase-item ${s.size}">
+    <img src="${s.img}" alt="${s.name} — ${s.note}" loading="lazy" onerror="handleImgError(this)">
+    <div class="showcase-caption"><b>${s.name}</b><span>${s.note}</span></div>
+  </div>
+`).join('');
+
+/* =========================================================
+   AUTO-SCROLLING GUEST REVIEW PHOTOS (marquee)
+========================================================= */
+const MARQUEE_STAR = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.9L5.8 20l1.6-7L2 8.2l7.1-.6L12 2z"/></svg>';
+
+const guestPhotoReviews = [
+  { img: "https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?auto=format&fit=crop&w=700&q=80", quote: "The photos didn't do it justice. The pool alone was worth the trip.", name: "Charlotte H.", loc: "Villa Sila", rating: 5 },
+  { img: "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?auto=format&fit=crop&w=700&q=80", quote: "Booked a two-month stay with almost no back-and-forth at all.", name: "Lukas M.", loc: "Villa Anan", rating: 5 },
+  { img: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=700&q=80", quote: "Private at night, walkable by day. Exactly what we wanted.", name: "Ananya R.", loc: "Villa Nawa", rating: 5 },
+  { img: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=700&q=80", quote: "The rooftop deck at sunset was the highlight of our whole trip.", name: "Tom & Ellie", loc: "Villa Tara", rating: 4 },
+  { img: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=700&q=80", quote: "Bought the villa after renting it for a season. Easiest process ever.", name: "Marco B.", loc: "Villa Loka", rating: 5 },
+  { img: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=700&q=80", quote: "Hosted our whole family here. Not a single detail was missed.", name: "Sarah K.", loc: "Villa Prana", rating: 5 },
+  { img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80", quote: "Quiet, private, and the housekeeping was never intrusive.", name: "Daniela P.", loc: "Villa Sila", rating: 5 },
+  { img: "https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?auto=format&fit=crop&w=700&q=80", quote: "Met us in person on arrival — felt looked after the whole stay.", name: "James O.", loc: "Villa Anan", rating: 5 }
+];
+
+function marqueeStars(count){
+  let html = '';
+  for(let i=0;i<5;i++) html += `<span style="opacity:${i < count ? 1 : 0.3}">${MARQUEE_STAR}</span>`;
+  return html;
+}
+
+function marqueeCard(r){
+  return `
+    <div class="marquee-card">
+      <img src="${r.img}" alt="${r.name}" loading="lazy" onerror="handleImgError(this)">
+      <div class="marquee-body">
+        <div class="marquee-stars">${marqueeStars(r.rating)}</div>
+        <p class="marquee-quote">"${r.quote}"</p>
+        <div class="marquee-name">${r.name}<span>${r.loc}</span></div>
+      </div>
+    </div>
+  `;
+}
+
+/* duplicate the set so the loop is seamless at -50% translateX */
+const marqueeHTML = guestPhotoReviews.map(marqueeCard).join('') + guestPhotoReviews.map(marqueeCard).join('');
+document.getElementById('marqueeTrack').innerHTML = marqueeHTML;
+
+/* =========================================================
+   NAV SCROLL STATE
+========================================================= */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', window.scrollY > 60);
+});
+
+/* =========================================================
+   DETAIL OVERLAY + SLIDER
+========================================================= */
+const overlay = document.getElementById('overlay');
+const sliderTrack = document.getElementById('sliderTrack');
+const sliderDots = document.getElementById('sliderDots');
+const sliderCount = document.getElementById('sliderCount');
+const thumbStrip = document.getElementById('thumbStrip');
+let currentVilla = null;
+let slideIndex = 0;
+
+/* small inline icon set, kept minimal & consistent */
+const ICONS = {
+  bed: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M3 18v2M21 18v2"/><path d="M3 12V8a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/><path d="M14 12V9a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3"/></svg>',
+  bath: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3z"/><path d="M6 12V6a2 2 0 0 1 3-1.7"/><path d="M4 19v2M18 19v2"/></svg>',
+  guests: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/><circle cx="17" cy="8" r="2.4"/><path d="M16 14.2c2.9.5 5 2.6 5 5.8"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>',
+  star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L12 16.9 6.4 20l1.4-6.2L3 9.5l6.4-.6L12 3z"/></svg>'
+};
+
+function openDetail(id){
+  const v = villas.find(x => x.id === id);
+  if(!v) return;
+  currentVilla = v;
+  slideIndex = 0;
+
+  document.getElementById('crumbName').textContent = v.name;
+  document.getElementById('dLoc').textContent = v.location;
+  document.getElementById('dName').textContent = v.name;
+  document.getElementById('dLocLine').textContent = `${v.location} — Koh Samui, Thailand`;
+  document.getElementById('dDesc').textContent = v.desc;
+
+  const canRent = v.type.includes('rent'), canSale = v.type.includes('sale');
+  let badgeHTML = '';
+  if(canRent) badgeHTML += `<span class="detail-badge">For Rent</span>`;
+  if(canSale) badgeHTML += `<span class="detail-badge sale">For Sale</span>`;
+  badgeHTML += `<span class="verified">${ICONS.check} Verified Listing</span>`;
+  document.getElementById('dBadgeRow').innerHTML = badgeHTML;
+
+  const price = priceLine(v);
+  let priceHTML = `<b>${price.big}</b><span>${price.small}</span>`;
+  if(canRent && canSale){
+    priceHTML = `<b>${price.big}</b><span>Or buy from ${v.salePrice}</span>`;
+  }
+  if(v.promo && canRent){
+    const discounted = applyDiscount(price.big, v.promo.percent);
+    const extra = canSale ? `<span>Or buy from ${v.salePrice}</span>` : `<span>${price.small}</span>`;
+    priceHTML = `<b style="text-decoration:line-through;color:var(--ash);font-size:16px;">${price.big}</b><b>${discounted}<span class="promo-tag-inline">-${v.promo.percent}%</span></b>${extra}`;
+  }
+  document.getElementById('dPrice').innerHTML = priceHTML;
+
+  document.getElementById('dHighlights').innerHTML = (v.highlights || []).map(h =>
+    `<span class="highlight-chip">${ICONS.star}${h}</span>`
+  ).join('');
+
+  document.getElementById('dFacts').innerHTML = `
+    <div>${ICONS.bed}<div><b>${v.bedrooms}</b><span>Bedrooms</span></div></div>
+    <div>${ICONS.bath}<div><b>${v.bathrooms}</b><span>Bathrooms</span></div></div>
+    <div>${ICONS.guests}<div><b>${v.guests}</b><span>Guests</span></div></div>
+  `;
+
+  document.getElementById('dAmenities').innerHTML = v.amenities.map(a => `<li>${ICONS.check}${a}</li>`).join('');
+
+  renderPriceTable(v);
+
+  document.getElementById('dMap').src = `https://maps.google.com/maps?q=${v.lat},${v.lng}&z=14&output=embed`;
+  document.getElementById('dMapLink').href = `https://www.google.com/maps/search/?api=1&query=${v.lat},${v.lng}`;
+
+  sliderTrack.innerHTML = v.images.map(src => `<img src="${src}" alt="${v.name}" onerror="handleImgError(this)">`).join('');
+  sliderDots.innerHTML = v.images.map((_, i) => `<span class="${i===0?'active':''}"></span>`).join('');
+  thumbStrip.innerHTML = v.images.map((src, i) =>
+    `<img src="${src}" alt="${v.name} thumbnail ${i+1}" class="${i===0?'active':''}" onerror="handleImgError(this)" data-idx="${i}">`
+  ).join('');
+  thumbStrip.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', () => goToSlide(parseInt(img.dataset.idx, 10)));
+  });
+  updateSliderCount();
+
+  setupBookingForFor(v);
+
+  overlay.classList.add('open');
+  document.body.classList.add('locked');
+  overlay.scrollTop = 0;
+}
+
+function closeDetail(){
+  overlay.classList.remove('open');
+  document.body.classList.remove('locked');
+}
+document.getElementById('overlayClose').addEventListener('click', closeDetail);
+document.getElementById('crumbHome').addEventListener('click', closeDetail);
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeDetail(); });
+
+function goToSlide(i){
+  if(!currentVilla) return;
+  const total = currentVilla.images.length;
+  slideIndex = (i + total) % total;
+  sliderTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
+  document.querySelectorAll('#sliderDots span').forEach((d, idx) => d.classList.toggle('active', idx === slideIndex));
+  document.querySelectorAll('#thumbStrip img').forEach((t, idx) => t.classList.toggle('active', idx === slideIndex));
+  updateSliderCount();
+}
+function updateSliderCount(){
+  if(!currentVilla) return;
+  sliderCount.textContent = `${String(slideIndex+1).padStart(2,'0')} / ${String(currentVilla.images.length).padStart(2,'0')}`;
+}
+document.getElementById('sliderPrev').addEventListener('click', () => goToSlide(slideIndex - 1));
+document.getElementById('sliderNext').addEventListener('click', () => goToSlide(slideIndex + 1));
+
+/* touch swipe support */
+let touchStartX = 0;
+const sliderEl = document.getElementById('slider');
+sliderEl.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, {passive:true});
+sliderEl.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if(dx > 40) goToSlide(slideIndex - 1);
+  else if(dx < -40) goToSlide(slideIndex + 1);
+}, {passive:true});
+
+/* =========================================================
+   BOOKING FORM LOGIC
+========================================================= */
+const intentSeg = document.getElementById('intentSeg');
+const stayTypeSeg = document.getElementById('stayTypeSeg');
+const rentFields = document.getElementById('rentFields');
+const saleNote = document.getElementById('saleNote');
+const datesFields = document.getElementById('datesFields');
+const durationField = document.getElementById('durationField');
+const startMonthField = document.getElementById('startMonthField');
+const bTitle = document.getElementById('bTitle');
+const bookingForm = document.getElementById('bookingForm');
+const formError = document.getElementById('formError');
+
+let currentIntent = 'rent';
+let currentStay = 'nightly';
+
+function setupBookingForFor(v){
+  formError.classList.remove('show');
+  bookingForm.reset();
+  document.querySelectorAll('.date-input').forEach(el => delete el.dataset.iso);
+
+  const canRent = v.type.includes('rent');
+  const canSale = v.type.includes('sale');
+
+  if(canRent && canSale){
+    intentSeg.style.display = 'flex';
+    currentIntent = 'rent';
+    intentSeg.querySelectorAll('button').forEach(b => b.classList.toggle('active', b.dataset.intent === 'rent'));
+  } else {
+    intentSeg.style.display = 'none';
+    currentIntent = canSale && !canRent ? 'sale' : 'rent';
+  }
+  applyIntent();
+}
+
+function applyIntent(){
+  if(currentIntent === 'sale'){
+    rentFields.style.display = 'none';
+    saleNote.style.display = 'block';
+    bTitle.textContent = 'Enquire to Buy';
+  } else {
+    rentFields.style.display = 'block';
+    saleNote.style.display = 'none';
+    bTitle.textContent = 'Book This Villa';
+    applyStayType();
+  }
+}
+
+intentSeg.addEventListener('click', e => {
+  const btn = e.target.closest('button');
+  if(!btn) return;
+  intentSeg.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentIntent = btn.dataset.intent;
+  applyIntent();
+});
+
+function applyStayType(){
+  if(currentStay === 'monthly'){
+    datesFields.classList.add('hide');
+    durationField.classList.add('show');
+    startMonthField.classList.add('show');
+  } else {
+    datesFields.classList.remove('hide');
+    durationField.classList.remove('show');
+    startMonthField.classList.remove('show');
+  }
+}
+
+stayTypeSeg.addEventListener('click', e => {
+  const btn = e.target.closest('button');
+  if(!btn) return;
+  stayTypeSeg.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentStay = btn.dataset.stay;
+  applyStayType();
+});
+
+bookingForm.addEventListener('submit', e => {
+  e.preventDefault();
+  formError.classList.remove('show');
+
+  const name = document.getElementById('fName').value.trim();
+  const phone = document.getElementById('fPhone').value.trim();
+  if(!name || !phone){
+    formError.textContent = 'Please fill in your name and phone number.';
+    formError.classList.add('show');
+    return;
+  }
+
+  let lines = [];
+  lines.push(`Hello Samui House, I'd like to enquire about *${currentVilla.name}* (${currentVilla.location}).`);
+  lines.push('');
+  lines.push(`Name: ${name}`);
+  lines.push(`Phone: ${phone}`);
+
+  if(currentIntent === 'sale'){
+    const msg = document.getElementById('fSaleMsg').value.trim();
+    lines.push('Enquiry type: Purchase');
+    if(msg) lines.push(`Message: ${msg}`);
+  } else {
+    lines.push('Enquiry type: Rental');
+    if(currentStay === 'nightly'){
+      const checkin = document.getElementById('fCheckin').value;
+      const checkout = document.getElementById('fCheckout').value;
+      if(!checkin || !checkout){
+        formError.textContent = 'Please select both a check-in and check-out date.';
+        formError.classList.add('show');
+        return;
+      }
+      lines.push(`Check-in: ${checkin}`);
+      lines.push(`Check-out: ${checkout}`);
+    } else {
+      const duration = document.getElementById('fDuration').value;
+      const start = document.getElementById('fStartMonth').value;
+      if(!duration){
+        formError.textContent = 'Please select a booking duration.';
+        formError.classList.add('show');
+        return;
+      }
+      lines.push(`Booking duration: ${duration}`);
+      if(start) lines.push(`Preferred start date: ${start}`);
+    }
+    const guests = document.getElementById('fGuests').value;
+    if(guests) lines.push(`Guests: ${guests}`);
+  }
+
+  const messageBody = lines.join('\n');
+  const text = encodeURIComponent(messageBody);
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+
+  /* Send a copy by email automatically (requires EmailJS setup — see config above) */
+  sendBookingEmail({
+    to_email: NOTIFY_EMAIL,
+    subject: `New enquiry: ${currentVilla.name} (${currentIntent === 'sale' ? 'Purchase' : 'Rental'})`,
+    message: messageBody,
+    guest_name: name,
+    guest_phone: phone,
+    villa_name: currentVilla.name
+  });
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if(isMobile){
+    /* same-tab navigation triggers the native WhatsApp app more reliably on mobile */
+    window.location.href = url;
+  } else {
+    const win = window.open(url, '_blank');
+    if(!win) window.location.href = url; /* fallback if the popup was blocked */
+  }
+});
+
+function sendBookingEmail(params){
+  const statusEl = document.getElementById('emailStatus');
+  const notConfigured = !EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY.startsWith('YOUR_')
+    || !EMAILJS_SERVICE_ID || EMAILJS_SERVICE_ID.startsWith('YOUR_')
+    || !EMAILJS_TEMPLATE_ID || EMAILJS_TEMPLATE_ID.startsWith('YOUR_');
+
+  if(typeof emailjs === 'undefined' || notConfigured){
+    /* EmailJS hasn't been connected yet — see the CONFIG comment near the top of this script */
+    console.warn('EmailJS is not configured yet. The booking email was not sent. See the EMAILJS_* constants near the top of the script.');
+    return;
+  }
+
+  if(statusEl){ statusEl.style.display = 'block'; statusEl.textContent = 'Sending a copy to our team…'; }
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+    .then(() => {
+      if(statusEl) statusEl.textContent = '✓ A copy of this enquiry was emailed to our team.';
+    })
+    .catch((err) => {
+      console.error('EmailJS error:', err);
+      if(statusEl) statusEl.textContent = '';
+      if(statusEl) statusEl.style.display = 'none';
+    });
+}
+
+/* =========================================================
+   CUSTOM ENGLISH CALENDAR PICKER
+   (forces English month/day names regardless of device locale,
+   used for Check-in, Check-out, and Preferred Start Date)
+========================================================= */
+const MONTH_NAMES = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DOW_NAMES = ["Su","Mo","Tu","We","Th","Fr","Sa"];
+
+const calPopup = document.getElementById('calPopup');
+const calLabel = document.getElementById('calLabel');
+const calGrid = document.getElementById('calGrid');
+const calPrev = document.getElementById('calPrev');
+const calNext = document.getElementById('calNext');
+
+let calActiveInput = null;   // the input element currently bound to the popup
+let calViewYear, calViewMonth;
+let calMinDateFn = null;     // optional function(dateObj) => boolean disabled
+
+function pad2(n){ return String(n).padStart(2,'0'); }
+function toISO(y,m,d){ return `${y}-${pad2(m+1)}-${pad2(d)}`; }
+function formatDisplay(y,m,d){ return `${pad2(d)} ${MONTH_NAMES[m].slice(0,3)} ${y}`; }
+
+function openCalendar(inputEl, disabledBefore){
+  calActiveInput = inputEl;
+  calMinDateFn = disabledBefore || null;
+
+  const iso = inputEl.dataset.iso;
+  const base = iso ? new Date(iso + 'T00:00:00') : new Date();
+  calViewYear = base.getFullYear();
+  calViewMonth = base.getMonth();
+
+  renderCalendar();
+
+  const rect = inputEl.getBoundingClientRect();
+  const popW = 280;
+  let left = rect.left;
+  if(left + popW > window.innerWidth - 16) left = window.innerWidth - popW - 16;
+  calPopup.style.left = `${Math.max(16,left)}px`;
+  calPopup.style.top = `${rect.bottom + 8}px`;
+  calPopup.classList.add('open');
+}
+
+function closeCalendar(){
+  calPopup.classList.remove('open');
+  calActiveInput = null;
+}
+
+function renderCalendar(){
+  calLabel.textContent = `${MONTH_NAMES[calViewMonth]} ${calViewYear}`;
+  const firstDay = new Date(calViewYear, calViewMonth, 1).getDay();
+  const daysInMonth = new Date(calViewYear, calViewMonth + 1, 0).getDate();
+  const todayISO = toISO(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+  const selectedISO = calActiveInput ? calActiveInput.dataset.iso : null;
+
+  let html = DOW_NAMES.map(d => `<div class="cal-dow">${d}</div>`).join('');
+  for(let i=0;i<firstDay;i++) html += `<div class="cal-day empty"></div>`;
+
+  for(let d=1; d<=daysInMonth; d++){
+    const iso = toISO(calViewYear, calViewMonth, d);
+    const dateObj = new Date(calViewYear, calViewMonth, d);
+    let cls = 'cal-day';
+    if(calMinDateFn && calMinDateFn(dateObj)) cls += ' disabled';
+    if(iso === todayISO) cls += ' today';
+    if(iso === selectedISO) cls += ' selected';
+    html += `<div class="${cls}" data-iso="${iso}" data-day="${d}">${d}</div>`;
+  }
+  calGrid.innerHTML = html;
+
+  calGrid.querySelectorAll('.cal-day:not(.empty):not(.disabled)').forEach(cell => {
+    cell.addEventListener('click', () => {
+      const [y,m,d] = cell.dataset.iso.split('-').map(Number);
+      selectCalendarDate(y, m-1, d);
+    });
+  });
+}
+
+function selectCalendarDate(y, m, d){
+  if(!calActiveInput) return;
+  calActiveInput.dataset.iso = toISO(y,m,d);
+  calActiveInput.value = formatDisplay(y,m,d);
+  calActiveInput.dispatchEvent(new Event('change'));
+  closeCalendar();
+}
+
+calPrev.addEventListener('click', () => {
+  calViewMonth--;
+  if(calViewMonth < 0){ calViewMonth = 11; calViewYear--; }
+  renderCalendar();
+});
+calNext.addEventListener('click', () => {
+  calViewMonth++;
+  if(calViewMonth > 11){ calViewMonth = 0; calViewYear++; }
+  renderCalendar();
+});
+
+document.addEventListener('click', e => {
+  if(!calPopup.classList.contains('open')) return;
+  if(calPopup.contains(e.target) || e.target === calActiveInput) return;
+  closeCalendar();
+});
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeCalendar(); });
+
+const fCheckin = document.getElementById('fCheckin');
+const fCheckout = document.getElementById('fCheckout');
+const fStartMonth = document.getElementById('fStartMonth');
+
+function isBeforeToday(dateObj){
+  const today = new Date(); today.setHours(0,0,0,0);
+  return dateObj < today;
+}
+
+fCheckin.addEventListener('click', () => openCalendar(fCheckin, isBeforeToday));
+fStartMonth.addEventListener('click', () => openCalendar(fStartMonth, isBeforeToday));
+
+fCheckout.addEventListener('click', () => {
+  openCalendar(fCheckout, (dateObj) => {
+    if(isBeforeToday(dateObj)) return true;
+    if(fCheckin.dataset.iso){
+      const minCheckout = new Date(fCheckin.dataset.iso + 'T00:00:00');
+      return dateObj <= minCheckout;
+    }
+    return false;
+  });
+});
+
+/* if check-in changes to a date on/after check-out, clear check-out */
+fCheckin.addEventListener('change', () => {
+  if(fCheckout.dataset.iso && fCheckin.dataset.iso && fCheckout.dataset.iso <= fCheckin.dataset.iso){
+    fCheckout.value = '';
+    delete fCheckout.dataset.iso;
+  }
+});
+</script>
+</body>
+</html>
